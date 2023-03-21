@@ -23,8 +23,10 @@ inputs:
     default: ${{ github.repository }}
 
 runs:
-  using: node16
-  main: dist/index.js
+  using: "composite"
+  steps:
+    - run: DEBUG=* node dist/index.js
+      shell: bash
 
 branding:
   icon: shield
