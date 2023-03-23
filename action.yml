@@ -25,7 +25,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: DEBUG=* node ${{ github.repository }}/dist/index.js
+    - run: DEBUG=* node dist/index.js
       shell: bash
 
 branding:
